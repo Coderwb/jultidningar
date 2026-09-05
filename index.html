@@ -1,1 +1,1739 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>🎄 Arons Jul 2026 🎁</title>
+
+<meta name="description" content="Välkommen till Arons julbutik 2026! Upptäck julens tidningar och produkter.">
+
+<style>
+
+/* =========================================================
+   GRUND
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #174d32 0%, #08291b 45%, #03150d 100%);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   JULBAKGRUND
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.08), transparent 20%),
+        radial-gradient(circle at 80% 30%, rgba(255,215,0,.06), transparent 20%),
+        radial-gradient(circle at 50% 80%, rgba(220,20,60,.05), transparent 25%);
+    z-index:-2;
+}
+
+/* =========================================================
+   SNÖ
+========================================================= */
+
+.snow{
+    position:fixed;
+    top:-30px;
+    color:white;
+    pointer-events:none;
+    z-index:999;
+    animation:snowFall linear infinite;
+    text-shadow:0 0 8px white;
+}
+
+@keyframes snowFall{
+    from{
+        transform:translateY(-30px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+/* =========================================================
+   JULBELYSNING
+========================================================= */
+
+.christmas-lights{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:32px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:2000;
+    pointer-events:none;
+}
+
+.light{
+    width:14px;
+    height:20px;
+    border-radius:50%;
+    background:#ff2b2b;
+    box-shadow:
+        0 0 8px currentColor,
+        0 0 20px currentColor,
+        0 0 35px currentColor;
+    animation:lightGlow 1s infinite alternate;
+}
+
+.light:nth-child(2n){
+    background:#ffd700;
+    animation-delay:.2s;
+}
+
+.light:nth-child(3n){
+    background:#00ff88;
+    animation-delay:.4s;
+}
+
+.light:nth-child(4n){
+    background:#3da5ff;
+    animation-delay:.6s;
+}
+
+@keyframes lightGlow{
+    from{
+        transform:scale(.75);
+        opacity:.55;
+    }
+    to{
+        transform:scale(1.2);
+        opacity:1;
+    }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:18px 6%;
+    background:rgba(3,20,12,.82);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    text-shadow:
+        0 0 10px #ffd700,
+        0 0 25px rgba(255,215,0,.4);
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+    text-shadow:0 0 12px #ffd700;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 70px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,rgba(255,215,0,.12),transparent 65%);
+    animation:pulse 5s infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform:scale(.8);
+        opacity:.5;
+    }
+    to{
+        transform:scale(1.2);
+        opacity:1;
+    }
+}
+
+.hero-content{
+    position:relative;
+    max-width:1000px;
+    z-index:5;
+}
+
+.badge{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,215,0,.5);
+    box-shadow:0 0 25px rgba(255,215,0,.15);
+    margin-bottom:25px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+.tree{
+    font-size:130px;
+    filter:
+        drop-shadow(0 0 10px #00ff88)
+        drop-shadow(0 0 35px rgba(0,255,136,.4));
+    animation:treeFloat 3s ease-in-out infinite;
+}
+
+@keyframes treeFloat{
+    0%,100%{
+        transform:translateY(0) rotate(-2deg);
+    }
+    50%{
+        transform:translateY(-14px) rotate(2deg);
+    }
+}
+
+.hero h1{
+    font-size:clamp(48px,9vw,100px);
+    line-height:.95;
+    margin:15px 0 25px;
+    font-weight:1000;
+    letter-spacing:-4px;
+    text-shadow:
+        0 0 10px rgba(255,255,255,.3),
+        0 0 30px rgba(255,0,0,.2);
+}
+
+.red{
+    color:#ff3b3b;
+    text-shadow:
+        0 0 10px #ff3b3b,
+        0 0 35px rgba(255,59,59,.4);
+}
+
+.green{
+    color:#43ff91;
+    text-shadow:
+        0 0 10px #43ff91,
+        0 0 35px rgba(67,255,145,.4);
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#d9eee2;
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   KNAPPAR
+========================================================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.button{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:17px 28px;
+    border-radius:15px;
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.2);
+    font-weight:900;
+    font-size:16px;
+    cursor:pointer;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.6s;
+}
+
+.button:hover::before{
+    left:100%;
+}
+
+.button:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+.red-button{
+    background:linear-gradient(135deg,#d7193f,#ff304f);
+    box-shadow:
+        0 0 15px rgba(255,40,70,.5),
+        0 10px 35px rgba(0,0,0,.3);
+}
+
+.red-button:hover{
+    box-shadow:
+        0 0 30px rgba(255,40,70,.9),
+        0 15px 45px rgba(0,0,0,.4);
+}
+
+.green-button{
+    background:linear-gradient(135deg,#087f43,#10c96b);
+    box-shadow:
+        0 0 15px rgba(16,201,107,.4),
+        0 10px 35px rgba(0,0,0,.3);
+}
+
+.green-button:hover{
+    box-shadow:
+        0 0 30px rgba(16,201,107,.8),
+        0 15px 45px rgba(0,0,0,.4);
+}
+
+/* =========================================================
+   NEDRÄKNING
+========================================================= */
+
+.countdown-section{
+    padding:40px 20px 80px;
+    text-align:center;
+}
+
+.countdown-title{
+    font-size:20px;
+    margin-bottom:22px;
+    color:#ffd700;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    width:110px;
+    padding:20px 10px;
+    border-radius:20px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.03),
+        0 10px 30px rgba(0,0,0,.2);
+}
+
+.time-box strong{
+    display:block;
+    font-size:35px;
+    color:#ffd700;
+    text-shadow:0 0 15px rgba(255,215,0,.5);
+}
+
+.time-box span{
+    color:#b8d5c5;
+    font-size:13px;
+}
+
+/* =========================================================
+   SEKTIONER
+========================================================= */
+
+section{
+    padding:90px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:clamp(32px,5vw,55px);
+    margin-bottom:12px;
+}
+
+.title p{
+    color:#a9c8b8;
+    font-size:17px;
+}
+
+/* =========================================================
+   BUTIKER
+========================================================= */
+
+.stores{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.store{
+    padding:35px;
+    border-radius:28px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.04)
+        );
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.store::after{
+    content:"✨";
+    position:absolute;
+    right:25px;
+    top:20px;
+    font-size:35px;
+    animation:spinStar 4s linear infinite;
+}
+
+@keyframes spinStar{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.store:hover{
+    transform:translateY(-10px);
+    border-color:rgba(255,215,0,.45);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35),
+        0 0 30px rgba(255,215,0,.1);
+}
+
+.store-icon{
+    font-size:55px;
+    margin-bottom:18px;
+}
+
+.store h3{
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.store p{
+    color:#b8d5c5;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+/* =========================================================
+   JULKORT
+========================================================= */
+
+.products{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.product{
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    transition:.35s;
+    text-align:center;
+}
+
+.product:hover{
+    transform:translateY(-8px) rotate(.5deg);
+    background:rgba(255,255,255,.1);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.product-icon{
+    font-size:60px;
+    margin-bottom:18px;
+    animation:iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+.product h3{
+    margin-bottom:10px;
+}
+
+.product p{
+    color:#aac7b8;
+    line-height:1.6;
+}
+
+/* =========================================================
+   HUR DET FUNGERAR
+========================================================= */
+
+.steps{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.step{
+    position:relative;
+    padding:35px 25px;
+    text-align:center;
+    background:rgba(255,255,255,.06);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.number{
+    width:60px;
+    height:60px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#d7193f,#ff304f);
+    font-size:23px;
+    font-weight:900;
+    box-shadow:0 0 25px rgba(255,30,70,.4);
+}
+
+.step h3{
+    margin-bottom:12px;
+}
+
+.step p{
+    color:#aac7b8;
+    line-height:1.6;
+}
+
+/* =========================================================
+   JULBANNER
+========================================================= */
+
+.christmas-banner{
+    max-width:1100px;
+    margin:auto;
+    padding:55px 30px;
+    border-radius:35px;
+    text-align:center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(190,15,45,.25),
+            rgba(0,130,70,.25)
+        );
+    border:1px solid rgba(255,215,0,.2);
+    box-shadow:
+        0 0 50px rgba(255,215,0,.08),
+        inset 0 0 40px rgba(255,255,255,.03);
+}
+
+.christmas-banner h2{
+    font-size:clamp(32px,6vw,65px);
+    margin-bottom:15px;
+}
+
+.christmas-banner p{
+    color:#d2e6da;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   KONTAKT
+========================================================= */
+
+.contact{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.email{
+    display:inline-block;
+    margin-top:20px;
+    padding:17px 25px;
+    border-radius:15px;
+    background:rgba(255,255,255,.08);
+    color:#ffd700;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.email:hover{
+    background:#ffd700;
+    color:#092016;
+    box-shadow:0 0 25px #ffd700;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    text-align:center;
+    padding:45px 20px;
+    background:#020f09;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#89a99a;
+}
+
+footer strong{
+    color:#ffd700;
+}
+
+footer a{
+    color:#43ff91;
+    text-decoration:none;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.shop-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:5000;
+}
+
+.shop-modal.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.shop-box{
+    width:100%;
+    max-width:600px;
+    padding:35px;
+    border-radius:30px;
+    background:
+        linear-gradient(
+            145deg,
+            #123e28,
+            #071b11
+        );
+    border:1px solid rgba(255,215,0,.35);
+    box-shadow:
+        0 0 70px rgba(0,0,0,.7),
+        0 0 30px rgba(255,215,0,.12);
+    position:relative;
+    transform:scale(.8);
+    transition:.3s;
+}
+
+.shop-modal.active .shop-box{
+    transform:scale(1);
+}
+
+.close-shop{
+    position:absolute;
+    right:18px;
+    top:15px;
+    border:none;
+    background:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.shop-emoji{
+    text-align:center;
+    font-size:65px;
+    margin-bottom:10px;
+}
+
+.shop-box h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.shop-box > p{
+    text-align:center;
+    color:#aac7b8;
+    margin-bottom:25px;
+}
+
+.shop-choices{
+    display:grid;
+    gap:15px;
+}
+
+.shop-choice{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:20px;
+    border-radius:20px;
+    color:white;
+    text-decoration:none;
+    font-weight:900;
+    border:1px solid rgba(255,255,255,.12);
+    transition:.3s;
+}
+
+.shop-choice:hover{
+    transform:scale(1.03);
+}
+
+.red-choice{
+    background:linear-gradient(
+        135deg,
+        rgba(210,20,60,.8),
+        rgba(100,5,25,.8)
+    );
+    box-shadow:0 0 20px rgba(220,20,60,.15);
+}
+
+.green-choice{
+    background:linear-gradient(
+        135deg,
+        rgba(0,130,70,.8),
+        rgba(0,55,30,.8)
+    );
+    box-shadow:0 0 20px rgba(0,255,130,.12);
+}
+
+.choice-icon{
+    font-size:35px;
+}
+
+/* =========================================================
+   TOP BUTTON
+========================================================= */
+
+#topButton{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#d7193f;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,0,60,.4);
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+    z-index:3000;
+}
+
+#topButton.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+/* =========================================================
+   MOBIL
+========================================================= */
+
+@media(max-width:800px){
+
+    header{
+        padding:15px;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    nav{
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:85vh;
+        padding-top:70px;
+    }
+
+    .tree{
+        font-size:90px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stores,
+    .products,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:65px 20px;
+    }
+
+    .time-box{
+        width:80px;
+    }
+
+    .time-box strong{
+        font-size:27px;
+    }
+
+    .contact{
+        padding:30px 20px;
+    }
+
+    .email{
+        font-size:14px;
+        word-break:break-word;
+    }
+
+    .shop-box{
+        padding:28px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     JULBELYSNING
+===================================================== -->
+
+<div class="christmas-lights">
+
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="nav">
+
+        <div class="logo">
+            🎄 ARONS JUL 2026
+        </div>
+
+        <nav>
+            <a href="#hem">Hem</a>
+            <a href="#butiker">Butiker</a>
+            <a href="#sortiment">Sortiment</a>
+            <a href="#sa-fungerar">Så fungerar det</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main id="hem">
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ⭐ JULTIDNINGSFÖRSÄLJNING 2026 ⭐
+        </div>
+
+        <div class="tree">
+            🎄
+        </div>
+
+        <h1>
+            <span class="red">ARONS</span><br>
+            <span class="green">JUL 2026</span>
+        </h1>
+
+        <p>
+            Välkommen till en riktig julupplevelse! 🎅
+            Här hittar du julens tidningar, spännande produkter
+            och massor av julstämning. ✨
+        </p>
+
+        <div class="buttons">
+
+            <button
+                class="button red-button"
+                onclick="openShopChoice()">
+                🎁 HANDLA NU
+            </button>
+
+            <a
+                href="#butiker"
+                class="button green-button">
+                🎄 VISA BUTIKER
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEDRÄKNING
+===================================================== -->
+
+<section class="countdown-section">
+
+    <div class="countdown-title">
+        🎅 NEDRÄKNING TILL JULAFTON 🎅
+    </div>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <strong id="days">0</strong>
+            <span>DAGAR</span>
+        </div>
+
+        <div class="time-box">
+            <strong id="hours">0</strong>
+            <span>TIMMAR</span>
+        </div>
+
+        <div class="time-box">
+            <strong id="minutes">0</strong>
+            <span>MINUTER</span>
+        </div>
+
+        <div class="time-box">
+            <strong id="seconds">0</strong>
+            <span>SEKUNDER</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BUTIKER
+===================================================== -->
+
+<section id="butiker">
+
+    <div class="title">
+
+        <h2>
+            🎁 VÄLJ DIN JULBUTIK
+        </h2>
+
+        <p>
+            Två butiker – massor av jul!
+        </p>
+
+    </div>
+
+
+    <div class="stores">
+
+        <div class="store">
+
+            <div class="store-icon">
+                🎄
+            </div>
+
+            <h3>
+                Svenska Julförlaget
+            </h3>
+
+            <p>
+                Upptäck massor av jultidningar,
+                julprodukter och annat roligt.
+            </p>
+
+            <a
+                class="button red-button"
+                href="https://julforlaget.se/webbutik/catalog?uuid=c15b2d04-a4e5-11f1-9db8-4b37ab54b2a4"
+                target="_blank"
+                rel="noopener">
+                🎁 ÖPPNA BUTIK
+            </a>
+
+        </div>
+
+
+        <div class="store">
+
+            <div class="store-icon">
+                📚
+            </div>
+
+            <h3>
+                Jultidningsförlaget
+            </h3>
+
+            <p>
+                Hitta ännu fler tidningar och
+                juliga favoriter inför julen.
+            </p>
+
+            <a
+                class="button green-button"
+                href="https://jultidningsforlaget.se/webshop-webbutik?uuid=7c6381a5-a6ea-11f1-a227-4b71a6dcc6f7"
+                target="_blank"
+                rel="noopener">
+                📚 ÖPPNA BUTIK
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SORTIMENT
+===================================================== -->
+
+<section id="sortiment">
+
+    <div class="title">
+
+        <h2>
+            ✨ JULENS SORTIMENT
+        </h2>
+
+        <p>
+            Något för nästan alla julälskare!
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-icon">
+                📖
+            </div>
+
+            <h3>
+                Jultidningar
+            </h3>
+
+            <p>
+                Rolig läsning för stora och små
+                under julledigheten.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">
+                🎁
+            </div>
+
+            <h3>
+                Julklappar
+            </h3>
+
+            <p>
+                Hitta spännande julklappar
+                och presenter.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">
+                🧸
+            </div>
+
+            <h3>
+                Roliga saker
+            </h3>
+
+            <p>
+                Upptäck produkter som gör
+                julen ännu roligare.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">
+                🎄
+            </div>
+
+            <h3>
+                Julstämning
+            </h3>
+
+            <p>
+                Fyll hemmet med extra mycket
+                julkänsla.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">
+                ⭐
+            </div>
+
+            <h3>
+                Julfavoriter
+            </h3>
+
+            <p>
+                Spännande favoriter att upptäcka
+                inför julen.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-icon">
+                🎅
+            </div>
+
+            <h3>
+                Julkul
+            </h3>
+
+            <p>
+                Förbered dig på en riktigt
+                magisk jul!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SÅ FUNGERAR DET
+===================================================== -->
+
+<section id="sa-fungerar">
+
+    <div class="title">
+
+        <h2>
+            🎅 SÅ FUNGERAR DET
+        </h2>
+
+        <p>
+            Det är superenkelt!
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="number">
+                1
+            </div>
+
+            <h3>
+                🎁 Välj butik
+            </h3>
+
+            <p>
+                Klicka på Handla nu och välj
+                vilken webbutik du vill besöka.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                2
+            </div>
+
+            <h3>
+                🛒 Handla
+            </h3>
+
+            <p>
+                Bläddra bland tidningar och
+                andra roliga julprodukter.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                3
+            </div>
+
+            <h3>
+                🎄 Fira jul
+            </h3>
+
+            <p>
+                Sedan är det bara att vänta
+                på en riktigt härlig jul!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JULBANNER
+===================================================== -->
+
+<section>
+
+    <div class="christmas-banner">
+
+        <h2>
+            🎄 GOD JUL! 🎄
+        </h2>
+
+        <p>
+            Snö, granar, julklappar, pepparkakor,
+            tomtar och massor av julstämning! 🎅❄️🎁
+        </p>
+
+        <div class="buttons">
+
+            <button
+                class="button red-button"
+                onclick="openShopChoice()">
+                🎁 GÅ TILL BUTIKERNA
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     KONTAKT
+===================================================== -->
+
+<section id="kontakt">
+
+    <div class="contact">
+
+        <div class="title" style="margin-bottom:10px;">
+
+            <h2>
+                📧 KONTAKTA ARON
+            </h2>
+
+            <p>
+                Har du en fråga? Skicka gärna ett mejl!
+            </p>
+
+        </div>
+
+        <a
+            class="email"
+            href="mailto:jultidningar@proton.me">
+            ✉️ jultidningar@proton.me
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        🎄 <strong>ARONS JUL 2026</strong> 🎄
+    </p>
+
+    <p style="margin-top:10px;">
+        Gjord med ❤️ och massor av julstämning.
+    </p>
+
+    <p style="margin-top:15px;">
+        📧
+        <a href="mailto:jultidningar@proton.me">
+            jultidningar@proton.me
+        </a>
+    </p>
+
+    <p style="margin-top:20px;font-size:12px;">
+        © 2026 Aron
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     SHOP-MODAL
+===================================================== -->
+
+<div
+    class="shop-modal"
+    id="shopModal">
+
+    <div class="shop-box">
+
+        <button
+            class="close-shop"
+            onclick="closeShopChoice()">
+            ×
+        </button>
+
+        <div class="shop-emoji">
+            🎁
+        </div>
+
+        <h2>
+            Välj julbutik
+        </h2>
+
+        <p>
+            Vilken webbutik vill du besöka? 🎄
+        </p>
+
+
+        <div class="shop-choices">
+
+            <a
+                class="shop-choice red-choice"
+                href="https://julforlaget.se/webbutik/catalog?uuid=c15b2d04-a4e5-11f1-9db8-4b37ab54b2a4"
+                target="_blank"
+                rel="noopener">
+
+                <span class="choice-icon">
+                    🎄
+                </span>
+
+                <span>
+                    Svenska Julförlaget
+                </span>
+
+            </a>
+
+
+            <a
+                class="shop-choice green-choice"
+                href="https://jultidningsforlaget.se/webshop-webbutik?uuid=7c6381a5-a6ea-11f1-a227-4b71a6dcc6f7"
+                target="_blank"
+                rel="noopener">
+
+                <span class="choice-icon">
+                    📚
+                </span>
+
+                <span>
+                    Jultidningsförlaget
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TILL TOPPEN
+===================================================== -->
+
+<button id="topButton">
+    ↑
+</button>
+
+
+<script>
+
+/* =========================================================
+   SNÖ
+========================================================= */
+
+for(let i = 0; i < 90; i++){
+
+    const snow = document.createElement("div");
+
+    snow.className = "snow";
+
+    const symbols = ["❄","❅","❆","✦","•"];
+
+    snow.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    snow.style.left =
+        Math.random() * 100 + "vw";
+
+    snow.style.fontSize =
+        (7 + Math.random() * 18) + "px";
+
+    snow.style.opacity =
+        0.3 + Math.random() * 0.7;
+
+    snow.style.animationDuration =
+        (5 + Math.random() * 12) + "s";
+
+    snow.style.animationDelay =
+        (-Math.random() * 15) + "s";
+
+    document.body.appendChild(snow);
+}
+
+
+/* =========================================================
+   SHOP-MODAL
+========================================================= */
+
+function openShopChoice(){
+
+    document
+        .getElementById("shopModal")
+        .classList
+        .add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeShopChoice(){
+
+    document
+        .getElementById("shopModal")
+        .classList
+        .remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+document
+    .getElementById("shopModal")
+    .addEventListener("click", function(event){
+
+        if(event.target === this){
+
+            closeShopChoice();
+
+        }
+
+    });
+
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        closeShopChoice();
+
+    }
+
+});
+
+
+/* =========================================================
+   NEDRÄKNING TILL JULAFTON
+========================================================= */
+
+function updateCountdown(){
+
+    const now = new Date();
+
+    let christmas =
+        new Date(now.getFullYear(), 11, 24, 0, 0, 0);
+
+    if(now > christmas){
+
+        christmas =
+            new Date(now.getFullYear() + 1, 11, 24, 0, 0, 0);
+
+    }
+
+    const difference =
+        christmas - now;
+
+    const days =
+        Math.floor(difference / (1000 * 60 * 60 * 24));
+
+    const hours =
+        Math.floor(
+            (difference / (1000 * 60 * 60)) % 24
+        );
+
+    const minutes =
+        Math.floor(
+            (difference / (1000 * 60)) % 60
+        );
+
+    const seconds =
+        Math.floor(
+            (difference / 1000) % 60
+        );
+
+
+    document.getElementById("days").textContent =
+        days;
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* =========================================================
+   TOPP-KNAPP
+========================================================= */
+
+const topButton =
+    document.getElementById("topButton");
+
+
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY > 500){
+
+        topButton.classList.add("show");
+
+    }else{
+
+        topButton.classList.remove("show");
+
+    }
+
+});
+
+
+topButton.addEventListener("click",function(){
+
+    window.scrollTo({
+
+        top:0,
+        behavior:"smooth"
+
+    });
+
+});
+
+
+/* =========================================================
+   EXTRA JULKONFETTI NÄR SIDAN LADDAS
+========================================================= */
+
+window.addEventListener("load",function(){
+
+    for(let i = 0; i < 25; i++){
+
+        const star =
+            document.createElement("div");
+
+        star.textContent = "✨";
+
+        star.style.position = "fixed";
+        star.style.left = Math.random()*100 + "vw";
+        star.style.top = Math.random()*100 + "vh";
+        star.style.fontSize =
+            (8 + Math.random()*16) + "px";
+
+        star.style.pointerEvents = "none";
+        star.style.opacity = "0";
+
+        star.style.transition =
+            "opacity 1s, transform 2s";
+
+        star.style.zIndex = "1";
+
+        document.body.appendChild(star);
+
+        setTimeout(()=>{
+
+            star.style.opacity =
+                0.2 + Math.random()*0.5;
+
+            star.style.transform =
+                "scale(1.5)";
+
+        }, Math.random()*1500);
+
+    }
+
+});
+
+</script>
+
+</body>
+              </html>
